@@ -1,0 +1,24 @@
+class Solution {
+public:
+    char repeatedCharacter(string s) {
+        map<char,vector<int>> mp;
+        for(int i = 0; i < s.size(); i++)
+        {
+            mp[s[i]].push_back(i);
+        }
+        char ch;
+        int idx = INT_MAX;
+        for(int i = 0; i < s.size(); i++)
+        {
+            if(mp[s[i]].size() > 1)
+            {
+                if(mp[s[i]][1] < idx)
+                {
+                    idx = mp[s[i]][1];
+                    ch =  s[i];
+                }
+            }
+        }
+        return ch;
+    }
+};
