@@ -91,7 +91,7 @@ void init()
     freopen("output.txt", "w", stdout);
   #endif
 }
-// Adding two very large numbers;
+// Large Factorials;
 
 void LargeFactorial(vector<int>& vec,int n,int& sz)
 {
