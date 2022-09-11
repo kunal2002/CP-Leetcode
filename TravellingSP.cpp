@@ -108,6 +108,7 @@ int tsp(vector<vector<int>> dist, int setofCities,int city,int n,vector<vector<i
 			ans = min(ans,subprob);
 		}
 	}
+	dp[setofCities][city] = ans;
 	return ans;
 }
 void solve()
